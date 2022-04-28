@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="main-container grid">
+    <div class="client-control-container">
+      <div class="client-info flex">
+        <div>
+          <img src="./images/image-jeremy.png" alt="jeremy's picture" class="profile-picture">
+        </div>
+        <div>
+          <p>Report for</p> 
+          <h1 class="client-name">Jeremy Robson</h1>
+        </div>
+      </div>
+      <ul class="time-stats-container flex">
+        <li id="daily" class="timeframe active">Daily</li>
+        <li id="weekly" class="timeframe">Weekly</li>
+        <li id="monthly" class="timeframe">Monthly</li>
+      </ul>
+    </div>
+  
+    <!-- WORK -->
+    <div class="stats-container work-container">
+      <div class="sub-container">
+        <div class="stats-title flex">
+          <h2>Work</h2>
+          <img src="./images/icon-ellipsis.svg" alt="icon" class="options-icon">
+        </div>
+        <div class="stats flex">
+          <h2 class="current-stats" id="current-stats">5hrs <!-- daily --></h2>
+          <p class="previous-stats" id="previous-stats">Previous - 2hrs <!-- daily --></p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- PLAY -->
+    <div class="stats-container play-container">
+      <div class="sub-container">
+        <div class="stats-title flex">
+          <h2>Play</h2>
+          <img src="./images/icon-ellipsis.svg" alt="icon" class="options-icon">
+        </div>
+        <div class="stats flex">
+          <h2 class="current-stats" id="current-stats">1hr <!-- daily --></h2>
+          <p class="previous-stats" id="previous-stats">Previous - 2hrs <!-- daily --></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- STUDY -->
+    <div class="stats-container study-container">
+      <div class="sub-container">
+        <div class="stats-title flex">
+          <h2>Study</h2>
+          <img src="./images/icon-ellipsis.svg" alt="icon" class="options-icon">
+        </div>
+        <div class="stats flex">
+          <h2 class="current-stats" id="current-stats">0hrs <!-- daily --></h2>
+          <p class="previous-stats" id="previous-stats">Previous - 1hr <!-- daily --></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- EXERCISE -->
+    <div class="stats-container exercise-container">
+      <div class="sub-container">
+        <div class="stats-title flex">
+          <h2>Exercise</h2>
+          <img src="./images/icon-ellipsis.svg" alt="icon" class="options-icon">
+        </div>
+        <div class="stats flex">
+          <h2 class="current-stats" id="current-stats">1hr <!-- daily --></h2>
+          <p class="previous-stats" id="previous-stats">Previous - 1hr <!-- daily --></p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- SOCIAL -->
+    <div class="stats-container social-container">
+      <div class="sub-container">
+        <div class="stats-title flex">
+          <h2>Social</h2>
+          <img src="./images/icon-ellipsis.svg" alt="icon" class="options-icon">
+        </div>
+        <div class="stats flex">
+          <h2 class="current-stats" id="current-stats">1hr <!-- daily --></h2>
+          <p class="previous-stats" id="previous-stats">Previous - 3hrs <!-- daily --></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SELF-CARE -->
+    <div class="stats-container self-care-container">
+      <div class="sub-container">
+        <div class="stats-title flex">
+          <h2>Self Care</h2>
+          <img src="./images/icon-ellipsis.svg" alt="icon" class="options-icon">
+        </div>
+        <div class="stats flex">
+          <h2 class="current-stats" id="current-stats">0hrs <!-- daily --></h2>
+          <p class="previous-stats" id="previous-stats">Previous - 1hr <!-- daily --></p>
+        </div>
+      </div>
+    </div>
+      
+  </main>
+
+  
+
+  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Jesse Ogbonna</a>.
+    </div>
+</body>
+</html>

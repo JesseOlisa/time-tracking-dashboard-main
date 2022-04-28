@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/*RESETS*/
+
+/*general*/
+
+/*box-sizing*/
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+ {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+
+/*makes image easier to work with*/
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul, li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+/* UTILITY CLASSES */
+.flex {
+    display: flex;
+    align-items: center;
+}
+.grid {
+    display: grid;
+}
+/* Set core body defaults */
+body {
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: hsl(226, 43%, 10%);
+    color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =====
+MAIN-CONTAINER
+======= */
+.main-container {
+    width: 85%;
+    margin-block: 4rem;
+    grid-template-areas: 
+    'client-info'
+    'work'
+    'play'
+    'study'
+    'exercise'
+    'social'
+    'self-care'
+    ;
+}
+/* ======
+CLIENT CONTROL
+====== */
+.client-control-container {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 1rem;
+    grid-area: client-info;
+}
+.client-info {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+}
+.client-info div:first-child {
+    width: 20%;
+    padding-inline: .8rem;
+}
+.client-info div:nth-child(2) {
+   padding-left: .5rem;
+}
+.profile-picture {
+    border: 3px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+.client-info p {
+    opacity: .7;
+}
+.client-info h1 {
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+/* ======
+TIME STATS
+====== */
+.time-stats-container {
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.2rem;
+}
+.time-stats-container li {
+    color: hsl(236, 100%, 87%);
+    transition: color 0.5s ease;
+    cursor: pointer;
+}
+.time-stats-container li:hover, li.active {
+    color: hsl(0, 0%, 100%);
+}
+
+/* ======
+STATS CONTAINER
+====== */
+
+.stats-container {
+    margin-top: 1.3rem ;
+    padding-top: 1.9rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+.sub-container {
+    background-color: hsl(235, 46%, 20%);
+    padding: 1.3rem 1.1rem;
+    border-radius: 1rem;
+}
+.stats-title {
+    justify-content: space-between;
+}
+.stats-title h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.stats {
+    justify-content: space-between;
+    padding-block: .5rem;
+}
+.stats h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+.stats p {
+    color: hsl(236, 100%, 87%);
+    font-weight: 300;
+}
+
+
+/*====== 
+INDIVIDUAL CONTAINER STYLING 
+=======*/
+
+.work-container {
+    grid-area: work;
+    background: url(./images/icon-work.svg) no-repeat top -8% right 3%;
+    background-color: hsl(15, 100%, 70%);
+}
+.play-container {
+    grid-area: play;
+    background: url(./images/icon-play.svg) no-repeat top -8% right 3%;
+    background-color: hsl(195, 74%, 62%);
+}
+.study-container {
+    grid-area: study;
+    background: url(./images/icon-study.svg) no-repeat top -8% right 3%;
+    background-color: hsl(348, 100%, 68%);
+}
+.exercise-container {
+    grid-area: exercise;
+    background: url(./images/icon-exercise.svg) no-repeat top -8% right 3%;
+    background-color: hsl(145, 58%, 55%);
+}
+.social-container {
+    grid-area: social;
+    background: url(./images/icon-social.svg) no-repeat top -45% right 3%;
+    background-color: hsl(264, 64%, 52%);
+}
+.self-care-container {
+    grid-area: self-care;
+    background: url(./images/icon-self-care.svg) no-repeat top -8% right 3%;
+    background-color: hsl(43, 84%, 65%);
+}
+
+/* ======
+MEDIA QUERIES
+====== */
+@media screen and (min-width: 35.125rem){
+    .main-container {
+        grid-template-areas: 
+        'client-info work play'
+        'client-info study exercise'
+        'social self-care self-care'
+        ;
+    }
+    .client-control-container {
+        margin-top: 1.3rem;
+        margin-right: .5rem;
+        max-width: 23rem;
+    }
+    .time-stats-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .time-stats-container li {
+        padding-block: .5rem;
+        font-size: 1rem;
+    }
+    .client-info {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .stats-container {
+        margin-inline: .5rem;
+        min-width: 10rem;
+    }
+    .stats {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 59.375rem) {
+    .main-container {
+        grid-template-areas: 
+        'client-info work play study'
+        'client-info exercise social self-care'
+        ;
+    }
+    .client-control-container {
+        max-width: 13.5rem;
+        justify-self: end;
+    }
+    .client-info div:first-child {
+        width: 35%;
+        padding-inline: .8rem;
+    }
+    .client-info div:nth-child(2) {
+        padding-top: 1.5rem;
+     }
+    .client-info h1 {
+        font-size: 2rem;
+    }
+    .stats-container {
+        max-width: 15rem;
+    }
+    .stats h2 {
+        font-size: 2.9rem;
+    }
+    .stats p {
+        margin-top: .5rem;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 560px) {
+    .main-container {
+        width: 80%;
+    }
+}
+@media screen and (min-width: 75rem) {
+    .main-container {
+        width: 80%;
+    }
+    .client-info {
+        padding-bottom: 4rem;
+    }
+    .stats-container {
+        margin-inline: .9rem;
+        background-size: 22%;
+        background-position: top 0% right 7%;
+    }
+    .social-container {
+        background-position: top -8% right 3%;
+    }
+}
+
+@media screen and (min-width: 93.75rem) {
+    .client-control-container {
+        max-width: 25rem;
+        justify-self: center;
+    }
+    .stats-container {
+        padding-top: 2.1rem;
+        max-width: 20rem;
+    }
+}
