@@ -230,6 +230,9 @@ MEDIA QUERIES
         margin-right: .5rem;
         max-width: 23rem;
     }
+    .client-info div:first-child {
+        width: 30%;
+    }
     .time-stats-container {
         flex-direction: column;
         justify-content: flex-start;
@@ -243,6 +246,7 @@ MEDIA QUERIES
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        padding-bottom: 4rem;
     }
     .stats-container {
         margin-inline: .5rem;
@@ -295,9 +299,6 @@ MEDIA QUERIES
     .main-container {
         width: 80%;
     }
-    .client-info {
-        padding-bottom: 4rem;
-    }
     .stats-container {
         margin-inline: .9rem;
         background-size: 22%;
@@ -305,6 +306,12 @@ MEDIA QUERIES
     }
     .social-container {
         background-position: top -8% right 3%;
+    }
+    .stats h2 {
+        font-size: 3.4rem;
+    }
+    .stats p {
+        margin-top: .5rem;
     }
 }
 
